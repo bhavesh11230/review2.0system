@@ -15,6 +15,12 @@ app.use("/api/v1",router)
 dotenv.config();
 
 dbConnect();
+app.get("/",(req, res) => {
+  res.json({
+    "success": true,
+    "message": "server running successfully!",
+  })
+})
 
 
 
